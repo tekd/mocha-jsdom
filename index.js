@@ -49,7 +49,7 @@ module.exports = function (_options) {
         "twice. use 'skipWindowCheck' to disable this check.")
     }
 
-    require('jsdom').env(
+    require('jsdom/lib/old-api').env(
       extend(extend({}, options), { done: done }))
 
     function done (errors, window) {
